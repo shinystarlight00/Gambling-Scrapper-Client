@@ -1,0 +1,69 @@
+:root {
+    --toastify-icon-color-error: rgb(255, 0, 38);
+    --toastify-toast-width: 350px
+}
+
+// React-toastify
+.Toastify__toast {
+    background-color: #24252F !important;
+    color: #e3e3e3 !important;
+
+    .Toastify__progress-bar--error {
+        background: rgb(255, 0, 38);
+    }
+
+    .Toastify__close-button {
+        color: #fff;
+        opacity: 0.8;
+    }
+}
+
+// React Date Picker
+.react-datepicker {
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+    top: 55px;
+    border: none;
+    background-color: var(--bg);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.348);
+    font-family: "Space Grotesk";
+
+    &__header {
+        background: #24252F;
+        color: #fff;
+    }
+
+    &__current-month, &__day-name, &__day { color: #fff; }
+
+    &__day {
+        font-weight: 700;
+
+        &--in-range {
+            background: linear-gradient(60deg, gold, orange);
+            color: var(--bg);
+        }
+
+        &--in-selecting-range, &--selecting-range-start, &--selecting-range-end {
+            background-color: rgba(255, 255, 255, .2) !important;
+        }
+
+        &--keyboard-selected, &--selected {
+            background: orange !important;
+            color: var(--bg);
+        }
+        
+        &--disabled {
+            color: gray;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .1);
+        }
+    }
+}
+
+// recharts
+/* .recharts-wrapper .recharts-cartesian-grid-horizontal line:last-child {
+    stroke-opacity: 0;
+} */
