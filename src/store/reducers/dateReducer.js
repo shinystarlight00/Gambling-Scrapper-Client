@@ -4,7 +4,7 @@ import moment from "moment";
 export const dateSlice = createSlice({
     name: "date",
     initialState: {
-        start: moment("2023-10-25").toDate(),
+        start: moment("2025-01-03").toDate(),
         end: new Date(),
     },
     reducers: {

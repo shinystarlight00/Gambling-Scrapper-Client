@@ -54,7 +54,7 @@ export default function Header({
         switch(quickDate) {
             case "All time":
                 dispatch(setDate({
-                    start: moment("2023-10-25").toDate(),
+                    start: moment("2025-01-03").toDate(),
                     end: now,
                 }));
                 break;

@@ -194,7 +194,7 @@ export default function Modal({
                                                         : ""
                                                     }
                                                 </span>
-                                                <span className="date">{moment(payload?.[0]?.payload?.date).format("YYYY/MM/DD")}</span>
+                                                <span className="date">{moment(payload?.[0]?.payload?.date).utcOffset(0).format("MM/DD/YYYY")}</span>
                                             </div>
                                         )
                                     }}
@@ -212,10 +212,10 @@ export default function Modal({
                                     }}
                                     tickFormatter={tick =>
                                         intervalType == "month"
-                                            ? moment(tick).subtract(1, "month").startOf("month").format('YYYY/MM')
+                                            ? moment(tick).utcOffset(0).startOf("month").format('MM/YYYY')
                                             : intervalType == "hour"
-                                                ? moment(tick).format("MM/DD HH:MM")
-                                                : moment(tick).format('MM/DD')
+                                                ? moment(tick).utcOffset(0).format("MM/DD HH:MM")
+                                                : moment(tick).utcOffset(0).format('MM/DD')
                                     }
                                     interval="preserveStart"
                                 />
