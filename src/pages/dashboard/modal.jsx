@@ -118,10 +118,14 @@ export default function Modal({
                             }}
                         >
                             <div className="start">
-                                <span>{date.start?.toLocaleString("en-GB")?.split(",")?.[0] || "-"}</span>
+                                <span>{date.start
+                    ? moment(date.start).utcOffset(0).format("MM/DD/YYYY")
+                    : "-"}</span>
                             </div>
                             <div className="end">
-                                <span>{date.end?.toLocaleString("en-GB")?.split(",")?.[0] || "-"}</span>
+                                <span>{date.end
+                    ? moment(date.end).utcOffset(0).format("MM/DD/YYYY")
+                    : "-"}</span>
                                 <img src="/images/icons/calendar.svg" />
                             </div>
 
@@ -136,7 +140,7 @@ export default function Modal({
                                         startDate={date.start}
                                         endDate={date.end}
                                         maxDate={new Date(new Date().getTime() /*+ 1000 * 60 * 60 * 24*/ )}
-                                        minDate={new Date("2023.10.25")}
+                                        minDate={new Date("2025-01-03")}
                                         selectsRange
                                         inline
                                     />
